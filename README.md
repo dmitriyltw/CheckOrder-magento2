@@ -1,1 +1,2 @@
-# CheckOrder-magento2
+# Check-order-module
+First attempt to make a module for magento 2
