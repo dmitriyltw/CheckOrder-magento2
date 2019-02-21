@@ -37,9 +37,9 @@ class OrderProvider
     {
         $searchCriteria = $this->searchCriteriaBuilder->addFilter('increment_id', $fieldValue, 'eq')->create();
         $orders = $this->orderRepository->getList($searchCriteria)->getItems();
-//        if (!$orders){
-//            throw new NotFoundException(__('Parameter is incorrect.'));
-//        }
+        if (!$orders){
+            throw new NotFoundException(__('Parameter is incorrect.'));
+        }
         return array_shift($orders);
     }
 }
